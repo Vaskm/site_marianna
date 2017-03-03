@@ -1,0 +1,20 @@
+@import "http://webfonts.ru/import/raleway.css";
+/*
+	Raleway, 300, 400,  500
+*/
+@import "http://webfonts.ru/import/dancingscript.css";
+/*
+	Dancing Script, 400
+*/
+@import "http://webfonts.ru/import/playfair.css";
+/*
+	Playfair Display, 400
+*/
+body {
+	font-family: Raleway;
+	font-size  : 16px;
+}
+
+a {
+	color      : #696969;     
+}

@@ -1,0 +1,24 @@
+// Fonts
+$font-family-base: Raleway;
+$font-size-base  : 16px;
+// Colors
+$black           : #000000;
+$new-york-pink   : #d07c7c;
+$white           : #ffffff;
+$chicago         : #5a5957;
+$dove-gray       : #696969;
+$alto            : #d3d3d3;
+$mercury         : #e9e9e9;
+$green-pea       : #276432;
+$rose-fog        : #e6b5b5;
+$silver-chalice  : #a0a0a0;
+$gallery         : #ebebeb;
+$gray            : #838181;
+// Defaults
+body{
+font-family      : $font-family-base;
+font-size        : $font-size-base;
+}
+a{
+color            : $dove-gray;
+}
