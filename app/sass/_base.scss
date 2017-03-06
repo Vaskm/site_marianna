@@ -1,0 +1,117 @@
+// Base
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color:$gray;
+    line-height: $line-height;
+}
+
+a {
+    color: $dove-gray;
+}
+.nav-link{
+    color: $dove-gray!important;
+}   
+
+.title_font-family {
+    font-family: Playfair Display;
+}
+
+.description_font-family {
+    font-family: Raleway;
+}
+
+.fw300 {
+    font-weight: 300;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.rem08 {
+    font-size: 0.875rem;
+}
+
+.rem1-5 {
+    font-size: 1.563rem;
+}
+
+.rem3 {
+    font-size: 3rem;
+}
+
+.hr {
+    height: 0.1875rem;
+    margin: auto;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.bg-pink {
+    background: $new-york-pink;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.actived::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 0.125rem;
+    background: $new-york-pink;
+}
+
+.nav-item.actived::after {
+    width: 60%;
+}
+
+.screen-title.actived::after {
+    width: 10%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.screen-title {
+    font-family: PlayfairDisplay;
+}
+.uppercase{
+        text-transform: uppercase;
+}
+.color-chicago{
+    color: $chicago;
+}
+
+.jumbotron {
+    background: transparent;
+}
+
+.description-title.actived::after{
+    height: 0.125rem;
+    background: $white;  
+    margin: 10px auto;
+}
+.copyright{
+    margin: 20px auto;
+}
+.collapse{
+    display: none!important;
+}
+.collapse.show, .collapsing{
+    display: flex!important;
+    justify-content: flex-start!important;
+    a{
+        padding-left: 0!important;
+    }
+    .actived:after{
+        margin-left: 0;
+    }
+}   

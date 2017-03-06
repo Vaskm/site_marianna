@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<!-- Required meta tags always come first -->
 	<meta charset="utf-8">
@@ -10,22 +11,266 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
 	<!-- Custom styles -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<!--Header-->
 	<header>
-		<div class="jumbotron jumbotron-fluid header_jumbotron">
+		<!--jumbotron-->
+		<div class=" jumbotron-fluid screen_jumbotron header_jumbotron d-flex justify-content-center align-items-center">
 			<div class="container text-center header_jumbotron-container">
-				<p class="lead author-name">MariaAnna <br> <span class="author-hobby">Photography</span></p>
-				<h1 class="display-3 author-quote">See the world through my lens</h1>		
-				<div class="my-4 header-hr"></div>
-				<p>More info</p>
+				<div class="logo">
+					<div class="author-name"><img src="data:image/png;base64,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"
+						    alt="name"></div>
+					<div class="author-hobby"><img src="data:image/png;base64,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"
+						    alt="proffecy"></div>
+				</div>
+				<h1 class="display-3 author-quote text-white title_font-family fw400 rem3">See the world through my lens</h1>
+				<div class="my-4 hr header-hr"></div>
+				<div class="header-description description_font-family text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
 				<p class="lead">
 				</p>
 			</div>
 		</div>
+		<!--Navbar-->
+		<nav class="navbar navbar-toggleable-md navbar-light main-navbar">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+			    aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="data:image/png;base64,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"
+				    alt=""></a>
+			<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+				<ul class="navbar-nav fw500 rem08 text-uppercase">
+					<li class="nav-item actived">
+						<a class="nav-link" href="#">About me <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Works</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact me</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Follow me</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</header>
+
+	<!--screen-->
+	<div class=" jumbotron-fluid screen_jumbotron text-center">
+		<div class="container">
+			<h1 class="screen-title uppercase color-chicago actived rem1-5">A little bit about me</h1>
+			<p class="description_font-family screen_description rem08">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+				aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem ipsum dolor sit amet, consectetuer
+				adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+				ad minim.</p>
+
+		</div>
+	</div>
+
+	<!--screen-->
+	<div class=" jumbotron-fluid screen_jumbotron text-center">
+		<div class="container">
+			<h1 class="screen-title uppercase color-chicago actived rem1-5">Works</h1>
+
+			<!--gallery-->
+			<div class="gallery">
+				<iv class="row">
+					<div class="col-md-8">
+
+						<!--gallery-block-->
+						<div class="gallery-block">
+							<img src="./images/image--35-.png" class="img-fluid">
+							<div class="row gallery-block_row">
+								<div class="gallery-block_description-block col-md-8 offset-md-2 text-center">
+									<div class="description-title rem1-5 text-white actived">Nature</div>
+									<div class="description-article text-white fw500">beautiful nature</div>
+								</div>
+							</div>
+						</div>
+
+						<!--double-->
+						<div class="row">
+							<div class="col-md-6">
+								<!--gallery-block-->
+								<div class="gallery-block">
+									<img src="./images/man.png" class="img-fluid">
+									<div class="row gallery-block_row">
+										<div class="gallery-block_description-block col-md-8 offset-md-2 text-center">
+											<div class="description-title rem1-5 text-white actived">People</div>
+											<div class="description-article text-white fw500">beautiful people</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+
+								<!--gallery-block-->
+								<div class="gallery-block">
+									<img src="./images/roses.png" class="img-fluid">
+									<div class="row gallery-block_row">
+										<div class="gallery-block_description-block col-md-8 offset-md-2 text-center">
+											<div class="description-title rem1-5 text-white actived">Nature</div>
+											<div class="description-article text-white fw500">beautiful nature</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<!--gallery-block-->
+						<div class="gallery-block">
+							<img src="./images/bridge.png" class="img-fluid">
+							<div class="row gallery-block_row">
+								<div class="gallery-block_description-block col-md-10 offset-md-1 text-center">
+									<div class="description-title rem1-5 text-white actived">architecture</div>
+									<div class="description-article text-white fw500">beautiful architecture</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+
+						<!--gallery-block-->
+						<div class="gallery-block">
+							<img src="./images/bicycles.png" class="img-fluid">
+							<div class="row gallery-block_row">
+								<div class="gallery-block_description-block col-md-8 offset-md-2 text-center">
+									<div class="description-title rem1-5 text-white actived">Urban</div>
+									<div class="description-article text-white fw500">beautiful urban</div>
+								</div>
+							</div>
+						</div>
+
+						<!--gallery-block-->
+						<div class="gallery-block">
+							<img src="./images/lion.png" class="img-fluid">
+							<div class="row gallery-block_row">
+								<div class="gallery-block_description-block col-md-8 offset-md-2 text-center">
+									<div class="description-title rem1-5 text-white actived">Urban</div>
+									<div class="description-article text-white fw500">beautiful urban</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+			</div>
+		</div>
+		<button class="btn screen-button fw500">Load More</button>
+	</div>
+
+	<!--screen carousel-->
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div class="description">
+					<h1 class="screen-title text-center rem1-5 actived">See the world through my lens</h1>
+					<p class="description_font-family text-center fw300 header-description screen_description rem08">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="description">
+					<h1 class="screen-title text-center rem1-5 actived">See the world through my lens</h1>
+					<p class="description_font-family text-center fw300 header-description screen_description rem08">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="description">
+					<h1 class="screen-title text-center rem1-5 actived">See the world through my lens</h1>
+					<p class="description_font-family text-center fw300 header-description screen_description rem08">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<!--screen-->
+	<div class="jumbotron-fluid screen_jumbotron">
+		<div class="gallery-block">
+			<img class='w100' src="./images/video-preview.png">
+			<div class="row gallery-block_row">
+				<div class="gallery-block_description-block col-md-8 offset-md-2 text-center text-white rem3"><span>></span></div>
+			</div>
+		</div>
+	</div>
+
+	<!--screen-->
+	<div class="jumbotron-fluid screen_jumbotron">
+		<h1 class="screen-title uppercase text-center color-chicago actived rem1-5">Follow me</h1>
+
+		<div class="social-icons">
+			<a href="#" class="social-icon">
+				<i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#" class="social-icon">
+				<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#" class="social-icon">
+				<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#" class="social-icon">
+				<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#" class="social-icon">
+				<i class="fa fa-tumblr fa-2x" aria-hidden="true"></i>
+			</a>
+		</div>
+	</div>
+
+	<!--screen-->
+	<div class="jumbotron-fluid screen_jumbotron bla">
+		<div class="gallery-block_inverted">
+			<div class="row">
+				<div class="col-md-8 offset-md-2  blabla rem3">
+					<h1 class="screen-title uppercase text-center color-chicago actived rem1-5">Contact me</h1>
+
+					<!--form-->
+					<form action="#" class = "main-form" method="POST">
+						<div class="form-group">
+						  <input type="text" class="form-control" name="name" aria-describedby="helpId" placeholder="Your Name*">		  
+						</div>
+						<div class="form-group">
+						  <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Your Email Adress*">				
+						</div>
+						<div class="form-group">
+						  <textarea class="form-control" name="message" id="" rows="5"></textarea>
+						</div>
+						<button type="submit" class="btn screen-button fw500">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!--footer-->
+	<footer class="text-center">
+		<div class="author-name">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAASCAYAAADbo8kDAAAEEklEQVRYR83YjY0cRRAF4LoIwBEYIgAisIkAHIEhAiAC7AhsRwBEAI4AEwEmAiACnIGtD82T6lo9P7e63buRVrs7W9396tWrn9mrOnZ9UlVeb46Z33srvvxzSZRXO4d9XVXfLQR/U1W/VdUPkzUfV9XvVfWqqn6+pAM3POvzqvq1quD9tKre3XD9yeZbRH9fVY+q6smy+9+LCr4cTgvJAX8ymDMvRPKPVfW4qp5X1cszn3dt+zWigaLQRB3pTxcFjET/VFXU/u09VjN/gh9Wfl30WiNa5NUx5HnPd6kWhQMqAF8tNhcHf5CpkEzFslLpu3h5WyNaeiEYIIoFDkjpBrCLDZWkSeb+Qf93zV4smSKwpzbhlAt72E/PuRNBHGmGiNQEEQ2wz+qxpoLclJjb7uL2f9sCuxuZSe8gElkJL/x3Vt62iA6ZarK6BjQ1IDQkm0jY9XKyRwh76247A/q5wS4TBUvpU+Ye7IE71+9bREu110va9rQD+KNllPtvRSUclabelZ8+Rtnr342uL4OkvMwZL/f1hD8m5aTP+hk1k33UDMdsNL1tbqcYt2o01UWpf7Y0pmwqRziljCpJ46RYzvd9OOV3GWJvautXpp1x/EqtFXiEITJq7U1ZYNm61HUvGDJprJU3ovhsEc/WbL1lt4lxjWiOqGeAAR/lUhMSEBTy2bnYCUKvq4CZxaMkDZQjnKfs3pisz569FNlDcNwLUR1fD1TG0C8WwlNCYOpjqfUJGszJIkGMP/Y9areLcUY0p1x9uohjoo400UNKmiP7GfH26ulKWZyZZUPqaH9i40AyKOq3B8LHSUQQ4URybBE4NkF76jGI50dK2/ulnAXvTex2MY5EAwYEsLmS6pQInPeMXikbvnO0r+N0n7uRm/l1rJnOFShqSm2e3ZuR6R5ix/EzJSWZ07OB0n9pfSLC4Z8A5mnXHlt2hzGORCOHkrtaZk9+SAGcokeQwFkT4pHNJuoZlZv09t4Dlf8kkvKz+p3gOc/68anVHtalRCVQgtnLU8pH1sfnPbvDGDvRQD+cdGbkjyRIs8ykQHEmJNmHivJ7nsySkup9Hnz8xnm1X3BTrqy3T0oTO/coKKT5Tm3uweD8sdnB7kqZ8J1NMjO9BaacpTQRQ8/gmV38PILxbYhOqnQAvXT0cWpM34BHkidFTYbiny1jnL3zB05qJqVwOGNegpWy8ddSwpCaBioYPgugBuuclAwlaTaXU5w1fne2z3zs004wIQxWL0QfsUtZ2sNYIZqj/uIcx61rs9fyJURnLQWE4DQWjSRPlKPK1v7bTq2lpEwwPlNt6qZRURASEGs420tOx+ws2OyRCWo2vrFzZvz3ec/uKMb/8SDLAgcdITlOpDZe7P/cWcRPxL6y1XlvfwDOY1VySeB7FwAAAABJRU5ErkJggg==" alt="name">
+		</div>
+		<div class="author-hobby">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAQCAYAAACr+QluAAADDklEQVRYR8XXj3ENYRQF8JMOqAAVoAJUgApQASowKkAFqEBUgApQgahAdGB+Zs+bLzt5sbvJyDdjvPf2/jn33HPvtznI9vMsyevt7pfq+SDJtyRH+1AcbIT3NongVzf6X6bb4ySvkjxM8vkiiaGUmxPbLxdWeCXJ0yRL7ReGXW12K4mmIuT5Wd5rFdPAb6bge6U4S/p1IuVwdSkX56A5n4bmnIllLTECI8VZWuSLJNeTPLm4GjdFMj7fkyDon7vxNGKowmKaHyN0LcnPJYEn5yrsXpLjDeUoArFnyn6Iuw+73xHzMcm7JVjmxOgs2StEIAEtKUT9mGQoMMDzMVKA3/nwF+tDkvcD0Wbb80fT/9RX5d1Ncn8C/WUaVQveboJhJFZsMXrsrn3Y5aR0eBHMbmw8PM4JMcyJoQoJgQVasQX0e/rcosYbCQHAKc5iNja2/53ZCCnUbwD+SnJ7Ajza+iwnDOIhW8wuboUgSwx2fW3Yhx3JXfzqgUFeRIhdISBOHeIezYlhpMOdwRZsk3MQSEB2JcYzPjpDZQiVRJcQVGUpst0Xh63nVQWVFSjg7BvTboCpI1EFyY0wOfZhlxM+DWFL+Z2Cqlxt8vn+F8dITKUPlNPOmEsSLzjOjiS6S0GC1R4xvZ4BcCrzvjt0X4lRAhGOLL6AikcRmnNj+p2tZwibF8V3jp0twmBC7Fi8+OLxkbPNl/N4JEYii9UO6bwDjnFd7QLFeDuKFAWVPPYSIrLkSVpi5KuqABj3Qv3E8ExcYKnBOLCFRW62CkaYU9XOsbNDLOyNB6uY4qkZafJ13Dw7MUoKFgApgnQZIYVxvysMgXZAR2JcooDyaVK+HYmqYVykbPu94JqrZBkFvoqUCwFwIIxti59jV7zf2DsU7mbtcu/yRqyJ2N1YVUwdLuPNtDcZcNSw9lo/D3bE+ze/JFJiupnXgtrdlxs/FJgu6tjSl8Yx3Vbs3WG9BE7UjpjzML6Rj52bJVxAlfuamFuxG7EqZXzP2uVGTOfyf6ulM98dtIaQ2p4Hu6ZQ6Kl/7/0BqvXwQXgHofQAAAAASUVORK5CYII=" alt="hobby">
+		</div>
+		<div class="copyright fw300 rem08">
+			© Copyright 2014 MariaAnna
+		</div>
+	</footer>
 
 	<!-- jQuery -->
 	<script src="./libs/jquery/dist/jquery.min.js"></script>
@@ -34,4 +279,5 @@
 	<!-- Bootstrap JavaScript -->
 	<script src="./libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-</html> 
+
+</html>
